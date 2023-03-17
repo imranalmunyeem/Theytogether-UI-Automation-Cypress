@@ -8,13 +8,13 @@ describe('Login page test', () => {
         login.navigateToLogin();
     });
 
-//---------------------------------------URL & Title Verification----------------------------------------//
-context('Url verification',()=>{
+context('Url Test',()=>{
     it('Verify URL of the login page',()=>{
      cy.url().should('include', 'login');
      });
   });
 
+context('Login Functionality Test',()=>{
     it('Login function should be worked successfully with valid inputs', () => {
         login.email().should('be.visible');
         login.email().clear();
@@ -73,5 +73,7 @@ context('Url verification',()=>{
         login.getNewPassword().click();
         login.nonExistingAccountMessage().should('be.visible');
         login.nonExistingAccountMessage().should('contain','Error: There is no account with that username or email address.');
-    });    
+    }); 
+  });  
+   
 });

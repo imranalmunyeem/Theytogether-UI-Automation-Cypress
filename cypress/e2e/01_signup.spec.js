@@ -6,13 +6,13 @@ describe('Sign Up page test', () => {
         signup.navigateToSignup();
     });
 
-//---------------------------------------URL & Title Verification----------------------------------------//
-context('Url verification',()=>{
+context('Url Test',()=>{
     it('Verify URL of the sign up page',()=>{
      cy.url().should('include', 'sign-up');
      });
   });
 
+context('Sign up form Test',()=>{
     it('Sign up function should be worked successfully with valid inputs', () => {
         signup.firstName().should('be.visible');
         signup.firstName().clear();
@@ -113,4 +113,6 @@ context('Url verification',()=>{
         signup.emptyFieldmessage().should('be.visible');
         signup.emptyFieldmessage().should('contain','This field is required. Please enter text.')
     });
+  });  
+
 });
