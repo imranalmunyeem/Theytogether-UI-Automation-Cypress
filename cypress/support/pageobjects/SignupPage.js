@@ -1,10 +1,11 @@
 class SignupPage {
-    
+    //--------------------------------Credentials--------------------------------------------//    
     //Navigate
     navigateToSignup(){
         cy.visit('https://theytogether.com/sign-up/');
     }
-    
+
+    //--------------------------------Credentials--------------------------------------------//
     //First Name
     firstName(){
         return cy.get('#forminator-field-first-name-1_6413b26389071');         

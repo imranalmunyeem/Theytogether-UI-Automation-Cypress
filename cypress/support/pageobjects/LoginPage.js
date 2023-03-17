@@ -1,10 +1,11 @@
 class LoginPage {
-    
+//--------------------------------URL--------------------------------------------//    
     //Navigate
     navigateToLogin(){
         cy.visit('https://theytogether.com/login/');
     }
-    
+
+    //--------------------------------Credentials--------------------------------------------//
     //Email
     email(){
         return cy.get('#forminator-field-text-1_6413cdd44b32b');      
@@ -17,13 +18,13 @@ class LoginPage {
    
     }
     
-    
+     //--------------------------------Login--------------------------------------------//   
     //Login
     loginButton(){
         return cy.get('.forminator-button');
     }
 
-
+    //--------------------------------Messages--------------------------------------------//
     //Successful login message
     successfulLoginMessage(){
         return cy.get('.entry-title');
@@ -39,6 +40,7 @@ class LoginPage {
         return cy.get('#password-1 > .forminator-field > .forminator-error-message');
     }
 
+        //--------------------------------Reset--------------------------------------------//
     //navigate to lost password
     navigateToLostPassword(){
         cy.visit('https://theytogether.com/wp-login.php?action=lostpassword&redirect_to');
