@@ -4,6 +4,7 @@ import LoginPage from "../support/pageobjects/LoginPage";
 const login = new LoginPage()
 
 describe('Login page test', () => {
+    
     beforeEach('Will run before each it block',()=>{
         login.navigateToLogin();
     });
