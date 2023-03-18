@@ -12,6 +12,13 @@ module.exports = defineConfig({
     experimentalSessionAndOrigin: true,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
+    projectId: "eczz5y",
+    //------------------- Junit report Config-----------------------//
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+      configFile: 'reporter-config.json',
+    },
+    //------------------- Junit report Config End-----------------------//
     env: {
       signupUrl: "https://theytogether.com/sign-up/"
     }

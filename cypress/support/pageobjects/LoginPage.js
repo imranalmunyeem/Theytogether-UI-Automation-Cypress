@@ -8,13 +8,13 @@ class LoginPage {
     //--------------------------------Credentials--------------------------------------------//
     //Email
     email(){
-        return cy.get('#forminator-field-text-1_6413cdd44b32b');      
+        return cy.get('#forminator-field-text-1_64160a1b8874f');     
     }
 
 
     //Password
     password(){
-        return cy.get('#forminator-field-password-1_6413cdd44b32b');
+        return cy.get('#forminator-field-password-1_64160a1b8874f')
    
     }
     
