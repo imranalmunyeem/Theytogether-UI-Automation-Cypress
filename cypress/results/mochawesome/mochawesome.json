@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-03-19T20:17:21.853Z",
+    "end": "2023-03-19T20:18:02.459Z",
+    "duration": 40606,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4f61d5e7-b996-433a-b8e6-5ff384f9a61c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\01_signup.spec.js",
+      "file": "cypress\\e2e\\01_signup.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ced0c7ac-e4e4-4826-b81b-bc6b1664682b",
+          "title": "Sign Up page test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "2833912f-123e-4a46-bb1d-9e99fcc408a3",
+              "title": "Url Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Verify URL of the sign up page",
+                  "fullTitle": "Sign Up page test Url Test Verify URL of the sign up page",
+                  "timedOut": null,
+                  "duration": 3538,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.url().should('include', 'sign-up');",
+                  "err": {},
+                  "uuid": "cc038bfe-0041-4243-aa05-54582c8913fe",
+                  "parentUUID": "2833912f-123e-4a46-bb1d-9e99fcc408a3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "cc038bfe-0041-4243-aa05-54582c8913fe"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3538,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6321d92e-2439-4322-b195-de6236b13e21",
+              "title": "Sign up form Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Sign up function should be worked successfully with valid inputs",
+                  "fullTitle": "Sign Up page test Sign up form Test Sign up function should be worked successfully with valid inputs",
+                  "timedOut": null,
+                  "duration": 11048,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "signup.firstName().should('be.visible');\nsignup.firstName().clear();\nsignup.firstName().type('Test First Name');\nsignup.lastName().should('be.visible');\nsignup.lastName().clear();\nsignup.lastName().type('Test Last Name');\nsignup.userName().should('be.visible');\nsignup.userName().clear();\nsignup.userName().type('username123');\nsignup.email().should('be.visible');\nsignup.email().clear();\nsignup.email().type('test@mailinator.com');\nsignup.phone().should('be.visible');\nsignup.phone().clear();\nsignup.phone().type('07394032549');\nsignup.password().should('be.visible');\nsignup.password().clear();\nsignup.password().type('TestPassword');\nsignup.street().should('be.visible');\nsignup.street().clear();\nsignup.street().type('Test Street 101');\nsignup.city().should('be.visible');\nsignup.city().clear();\nsignup.city().type('Test City');\nsignup.zip().should('be.visible');\nsignup.zip().clear();\nsignup.zip().type('TestLu1');\nsignup.registerButton().click();\nsignup.successfulRegistrationMessage().should('contain', 'Account registration successful. Please check your email inbox to activate your new account.');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/01_signup.spec.js:17:27)",
+                    "diff": null
+                  },
+                  "uuid": "ec59ca4b-4482-4fe2-9fc6-275e8467abf3",
+                  "parentUUID": "6321d92e-2439-4322-b195-de6236b13e21",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Sign up function should not be worked successfully with existing email address",
+                  "fullTitle": "Sign Up page test Sign up form Test Sign up function should not be worked successfully with existing email address",
+                  "timedOut": null,
+                  "duration": 12041,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "signup.firstName().should('be.visible');\nsignup.firstName().clear();\nsignup.firstName().type('Test2 First Name');\nsignup.lastName().should('be.visible');\nsignup.lastName().clear();\nsignup.lastName().type('Test2 Last Name');\nsignup.userName().should('be.visible');\nsignup.userName().clear();\nsignup.userName().type('Test2username');\nsignup.email().should('be.visible');\nsignup.email().clear();\nsignup.email().type('o.md.abdullahalmamun@gmail.com');\nsignup.phone().should('be.visible');\nsignup.phone().clear();\nsignup.phone().type('07394032549');\nsignup.password().should('be.visible');\nsignup.password().clear();\nsignup.password().type('TestPassword');\nsignup.street().should('be.visible');\nsignup.street().clear();\nsignup.street().type('Test Street 102');\nsignup.city().should('be.visible');\nsignup.city().clear();\nsignup.city().type('Test2 City');\nsignup.zip().should('be.visible');\nsignup.zip().clear();\nsignup.zip().type('TestLu2');\nsignup.registerButton().click();\nsignup.existingEmailMessage().should('contain', 'This email address is already registered.');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/01_signup.spec.js:49:27)",
+                    "diff": null
+                  },
+                  "uuid": "7c4136cb-9522-45d9-8171-1b277295c84a",
+                  "parentUUID": "6321d92e-2439-4322-b195-de6236b13e21",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Sign up function should not be worked successfully with invalid email and phone",
+                  "fullTitle": "Sign Up page test Sign up form Test Sign up function should not be worked successfully with invalid email and phone",
+                  "timedOut": null,
+                  "duration": 11697,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "signup.firstName().should('be.visible');\nsignup.firstName().clear();\nsignup.firstName().type('invalid');\nsignup.lastName().should('be.visible');\nsignup.lastName().clear();\nsignup.lastName().type('invalid');\nsignup.userName().should('be.visible');\nsignup.userName().clear();\nsignup.userName().type('invalid');\nsignup.email().should('be.visible');\nsignup.email().clear();\nsignup.email().type('invalid');\nsignup.phone().should('be.visible');\nsignup.phone().clear();\nsignup.phone().type('invalid');\nsignup.password().should('be.visible');\nsignup.password().clear();\nsignup.password().type('invalid');\nsignup.street().should('be.visible');\nsignup.street().clear();\nsignup.street().type('invalid');\nsignup.city().should('be.visible');\nsignup.city().clear();\nsignup.city().type('invalid');\nsignup.zip().should('be.visible');\nsignup.zip().clear();\nsignup.zip().type('invalid');\nsignup.registerButton().click();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#forminator-field-first-name-1_6413b26389071`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/01_signup.spec.js:81:27)",
+                    "diff": null
+                  },
+                  "uuid": "ed6af60d-4c0a-43e4-b8ee-141cda97764c",
+                  "parentUUID": "6321d92e-2439-4322-b195-de6236b13e21",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Sign up function should not be worked successfully with empty input fields",
+                  "fullTitle": "Sign Up page test Sign up form Test Sign up function should not be worked successfully with empty input fields",
+                  "timedOut": null,
+                  "duration": 2079,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "signup.registerButton().click();\nsignup.emptyFieldmessage().should('be.visible');\nsignup.emptyFieldmessage().should('contain', 'This field is required. Please enter text.');",
+                  "err": {},
+                  "uuid": "ef7859e2-330c-4faf-ad9d-d3737f40f153",
+                  "parentUUID": "6321d92e-2439-4322-b195-de6236b13e21",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ef7859e2-330c-4faf-ad9d-d3737f40f153"
+              ],
+              "failures": [
+                "ec59ca4b-4482-4fe2-9fc6-275e8467abf3",
+                "7c4136cb-9522-45d9-8171-1b277295c84a",
+                "ed6af60d-4c0a-43e4-b8ee-141cda97764c"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 36865,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

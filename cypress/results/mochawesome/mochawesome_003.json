@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-19T20:18:58.726Z",
+    "end": "2023-03-19T20:19:12.676Z",
+    "duration": 13950,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6daa69a7-2b16-4230-ba69-82c7668a9281",
+      "title": "",
+      "fullFile": "cypress\\e2e\\04_home.spec.js",
+      "file": "cypress\\e2e\\04_home.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f77e0161-5392-4508-98d3-e1fa1b9f0392",
+          "title": "Title Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+              "title": "Url verification",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Title should contain the correct content",
+                  "fullTitle": "Title Test Url verification Title should contain the correct content",
+                  "timedOut": null,
+                  "duration": 2674,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.title().should('eq', 'OurWeddingJourney');",
+                  "err": {},
+                  "uuid": "2cf2f230-941d-4ac7-9e82-2cebeb022bb8",
+                  "parentUUID": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Title should not contain the incorrect content",
+                  "fullTitle": "Title Test Url verification Title should not contain the incorrect content",
+                  "timedOut": null,
+                  "duration": 11148,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.title().should('eq', 'wrongtitle');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: expected 'OurWeddingJourney' to equal 'wrongtitle'",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: expected 'OurWeddingJourney' to equal 'wrongtitle'\n    at Context.eval (webpack:///./cypress/e2e/04_home.spec.js:18:19)",
+                    "diff": "- 'OurWeddingJourney'\n+ 'wrongtitle'\n"
+                  },
+                  "uuid": "a7154234-3cbb-4e49-83e5-0534a4b14525",
+                  "parentUUID": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2cf2f230-941d-4ac7-9e82-2cebeb022bb8"
+              ],
+              "failures": [
+                "a7154234-3cbb-4e49-83e5-0534a4b14525"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 13822,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

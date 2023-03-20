@@ -9,7 +9,7 @@ describe('Contact Page', () => {
         contact.navigateToContact();
     });
 
-context('Url and Tagline Test',()=>{
+context('Url,Tagline,Heading Test',()=>{
     it('Url should contain the correct content', () => {
         cy.url().should('contain','contact');
     });
@@ -17,6 +17,16 @@ context('Url and Tagline Test',()=>{
     it('Tagline should contain the correct content', () => {
         contact.taglineMessage().should('be.visible');
         contact.taglineMessage().should('contain','We are optimists who love to work together');
+    });
+
+    it('Left area of should contain the correct heading', () => {
+        contact.leftHeading().should('be.visible');
+        contact.leftHeading().should('contain','You can find us at:');
+    });
+
+    it('Right area of should contain the correct heading', () => {
+        contact.rightHeading().should('be.visible');
+        contact.rightHeading().should('contain',"Let's get in touch:");
     });
 });
 
@@ -92,7 +102,7 @@ context('Contact Form Test',()=>{
         contact.invalidEmailMessage().should('contain','Please enter a valid email address.');
     });
     
-    it('Contact form should not be submitted successfully with invalid email', () => {
+    it('Contact form should not be submitted successfully with empty email field', () => {
         contact.hisFirstName().should('be.visible');
         contact.hisFirstName().clear();
         contact.hisFirstName().type('John');
@@ -107,7 +117,7 @@ context('Contact Form Test',()=>{
         contact.herLastName().type('Jane');
         contact.sendMessageButton().click();
         contact.emptyFieldMessage().should('be.visible');
-        contact.emptyFieldMessage().should('contain','Please enter a valid email address.');
+        contact.emptyFieldMessage().should('contain','This field is required.');
     });    
 }); 
 

@@ -52,6 +52,15 @@ class ContactPage{
     emptyFieldMessage(){
         return cy.get('#wpforms-9-field_1-error');
     }
+//-------------------------------------Headings and Tagline----------------------------------//
+    //Left Heading
+    leftHeading(){
+        return cy.get('.elementor-element-b29413d > .elementor-widget-container > .elementor-heading-title');
+    }
+    //Right Heading
+    rightHeading(){
+        return cy.get('.elementor-element-1506722 > .elementor-widget-container > .elementor-heading-title');
+    }
 
     //Tagline Message
     taglineMessage(){
