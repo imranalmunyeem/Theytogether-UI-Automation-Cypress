@@ -8,54 +8,54 @@ class SignupPage {
     //--------------------------------Credentials--------------------------------------------//
     //First Name
     firstName(){
-        return cy.get('#forminator-field-first-name-1_6413b26389071');         
+        return cy.get('#forminator-field-first-name-1_6439f85f87112');         
     }
 
     //Last Name
     lastName(){
-        return cy.get('#forminator-field-last-name-1_6413b26389071');
+        return cy.get('#forminator-field-last-name-1_6439f85f87112');
          
     }
 
     //User Name
     userName(){
-        return cy.get('#forminator-field-text-1_6413b26389071')   
+        return cy.get('#forminator-field-text-1_6439f85f87112');   
     }
     
     //Email
     email(){
-        return cy.get('#forminator-field-email-1_6413b26389071');      
+        return cy.get('#forminator-field-email-1_6439f85f87112');      
     }
 
 
     //Phone
     phone(){
-        return cy.get('#forminator-field-phone-1_6413b26389071');
+        return cy.get('#forminator-field-phone-1_6439f85f87112');
     
     }
 
     //Password
     password(){
-        return cy.get('#forminator-field-password-1_6413b26389071');
+        return cy.get('#forminator-field-password-1_6439f85f87112');
    
     }
     
     
     //Street Address
     street(){
-        return cy.get('#forminator-field-street_address-address-1_6413b26389071');
+        return cy.get('#forminator-field-street_address-address-1_6439f85f87112');
        
     }
     
     //City
     city(){
-        return cy.get('#forminator-field-city-address-1_6413b26389071');    
+        return cy.get('#forminator-field-city-address-1_6439f85f87112');    
     }
     
     
     //Zip Code
     zip(){
-        return cy.get('#forminator-field-zip-address-1_6413b26389071');       
+        return cy.get('#forminator-field-zip-address-1_6439f85f87112');       
     }    
 
     //Register

@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 2,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-03-19T20:18:58.726Z",
-    "end": "2023-03-19T20:19:12.676Z",
-    "duration": 13950,
+    "failures": 0,
+    "start": "2023-04-15T01:31:32.814Z",
+    "end": "2023-04-15T01:31:36.286Z",
+    "duration": 3472,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6daa69a7-2b16-4230-ba69-82c7668a9281",
+      "uuid": "2657b78e-edde-47c9-baf7-814f341840fa",
       "title": "",
       "fullFile": "cypress\\e2e\\04_home.spec.js",
       "file": "cypress\\e2e\\04_home.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f77e0161-5392-4508-98d3-e1fa1b9f0392",
+          "uuid": "adc16437-b865-4779-b27e-14a3d0fd991d",
           "title": "Title Test",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+              "uuid": "b8077011-06b0-46e2-b345-097ca661b406",
               "title": "Url verification",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Title should contain the correct content",
                   "fullTitle": "Title Test Url verification Title should contain the correct content",
                   "timedOut": null,
-                  "duration": 2674,
+                  "duration": 2694,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.title().should('eq', 'OurWeddingJourney');",
                   "err": {},
-                  "uuid": "2cf2f230-941d-4ac7-9e82-2cebeb022bb8",
-                  "parentUUID": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+                  "uuid": "ce5bb0ca-70da-4a42-bf08-3b92ff0e1262",
+                  "parentUUID": "b8077011-06b0-46e2-b345-097ca661b406",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,35 +65,30 @@
                   "title": "Title should not contain the incorrect content",
                   "fullTitle": "Title Test Url verification Title should not contain the incorrect content",
                   "timedOut": null,
-                  "duration": 11148,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 693,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.title().should('eq', 'wrongtitle');",
-                  "err": {
-                    "message": "AssertionError: Timed out retrying after 10000ms: expected 'OurWeddingJourney' to equal 'wrongtitle'",
-                    "estack": "AssertionError: Timed out retrying after 10000ms: expected 'OurWeddingJourney' to equal 'wrongtitle'\n    at Context.eval (webpack:///./cypress/e2e/04_home.spec.js:18:19)",
-                    "diff": "- 'OurWeddingJourney'\n+ 'wrongtitle'\n"
-                  },
-                  "uuid": "a7154234-3cbb-4e49-83e5-0534a4b14525",
-                  "parentUUID": "b9c99236-def9-4c6b-9105-1d84dea0b6a5",
+                  "code": "cy.title().should('not.equal', 'wrongtitle');",
+                  "err": {},
+                  "uuid": "d41b4ab3-281f-4626-9599-b01de64b0e68",
+                  "parentUUID": "b8077011-06b0-46e2-b345-097ca661b406",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "2cf2f230-941d-4ac7-9e82-2cebeb022bb8"
+                "ce5bb0ca-70da-4a42-bf08-3b92ff0e1262",
+                "d41b4ab3-281f-4626-9599-b01de64b0e68"
               ],
-              "failures": [
-                "a7154234-3cbb-4e49-83e5-0534a4b14525"
-              ],
+              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 13822,
+              "duration": 3387,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

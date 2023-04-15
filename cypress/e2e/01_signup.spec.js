@@ -5,7 +5,7 @@ describe('Sign Up page test', () => {
     beforeEach('Will run before each it block',()=>{
         signup.navigateToSignup();
     });
-
+ 
 context('Url Test',()=>{
     it('Verify URL of the sign up page',()=>{
      cy.url().should('include', 'sign-up');
@@ -16,28 +16,28 @@ context('Sign up form Test',()=>{
     it('Sign up function should be worked successfully with valid inputs', () => {
         signup.firstName().should('be.visible');
         signup.firstName().clear();
-        signup.firstName().type('Test First Name')
+        signup.firstName().type('Tester2 First Name')
         signup.lastName().should('be.visible');
         signup.lastName().clear();
-        signup.lastName().type('Test Last Name');
+        signup.lastName().type('Tester2 Last Name');
         signup.userName().should('be.visible');
         signup.userName().clear();
         signup.userName().type('username123');
         signup.email().should('be.visible');
         signup.email().clear();   
-        signup.email().type('test@mailinator.com'); 
+        signup.email().type('tester1@mailinator.com'); 
         signup.phone().should('be.visible');
         signup.phone().clear(); 
         signup.phone().type('07394032549');
         signup.password().should('be.visible');
         signup.password().clear();  
-        signup.password().type('TestPassword'); 
+        signup.password().type('Tester1Password'); 
         signup.street().should('be.visible');
         signup.street().clear();  
-        signup.street().type('Test Street 101');  
+        signup.street().type('Tester2 Street 101');  
         signup.city().should('be.visible');
         signup.city().clear(); 
-        signup.city().type('Test City');  
+        signup.city().type('Tester City');  
         signup.zip().should('be.visible');
         signup.zip().clear(); 
         signup.zip().type('TestLu1');
@@ -48,13 +48,13 @@ context('Sign up form Test',()=>{
     it('Sign up function should not be worked successfully with existing email address', () => {
         signup.firstName().should('be.visible');
         signup.firstName().clear();
-        signup.firstName().type('Test2 First Name')
+        signup.firstName().type('Tester2 First Name')
         signup.lastName().should('be.visible');
         signup.lastName().clear();
-        signup.lastName().type('Test2 Last Name');
+        signup.lastName().type('Tester2 Last Name');
         signup.userName().should('be.visible');
         signup.userName().clear();
-        signup.userName().type('Test2username');
+        signup.userName().type('Tester2username');
         signup.email().should('be.visible');
         signup.email().clear();   
         signup.email().type('o.md.abdullahalmamun@gmail.com'); 
@@ -66,10 +66,10 @@ context('Sign up form Test',()=>{
         signup.password().type('TestPassword'); 
         signup.street().should('be.visible');
         signup.street().clear();  
-        signup.street().type('Test Street 102');  
+        signup.street().type('Tester2 Street 102');  
         signup.city().should('be.visible');
         signup.city().clear(); 
-        signup.city().type('Test2 City');  
+        signup.city().type('Tester2 City');  
         signup.zip().should('be.visible');
         signup.zip().clear(); 
         signup.zip().type('TestLu2');

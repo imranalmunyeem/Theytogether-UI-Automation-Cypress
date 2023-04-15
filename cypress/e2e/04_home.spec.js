@@ -15,7 +15,7 @@ context('Url verification',()=>{
     });
 
     it('Title should not contain the incorrect content', () => {
-        cy.title().should('eq', 'wrongtitle');
+        cy.title().should('not.equal', 'wrongtitle');
     });
 }); 
 });
